@@ -21,7 +21,7 @@ class WatchListSerializer(serializers.ModelSerializer):
         return instance 
 
 
-class StreamPlatformSerializer(serializers.ModelSerializer):
+class StreamPlatformSerializer(serializers.HyperlinkedModelSerializer):
 
     watchlist = WatchListSerializer(many = True , read_only = True)
 
